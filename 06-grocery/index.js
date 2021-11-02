@@ -4,18 +4,13 @@ const items = document.querySelector('.items');
 const lists = document.querySelector('.lists');
 const result = document.querySelector('.result');
 const submitBtn = document.querySelector('.submit');
+const clearBtn = document.querySelector('.clear-btn');
 
 let arrayList = [];
 let timeout;
 let isEditing = false;
 let editValue = '';
-
-const setBackToDefault = () => {
-  input.value = '';
-  isEditing = false;
-  editValue = '';
-  submitBtn.value = 'submit';
-};
+let editedId;
 
 const handleDelete = (id) => {
   arrayList = arrayList.filter((item) => item.id !== Number(id));
@@ -23,25 +18,18 @@ const handleDelete = (id) => {
   showMsg('item deleted');
 };
 
-const handleClear = () => {
-  items.removeChild(lists);
-  showMsg('all items cleared!');
-  setBackToDefault();
-  handleSubmit();
-};
-
 const handleBtn = (e) => {
   const targetId = e.target.parentElement.parentElement.id;
   const type = e.target.dataset.type;
   if (type === 'edit') {
+    const editId = arrayList.find((item) => item.id === Number(targetId));
+    editedId = editId;
     editValue = e.target.parentElement.previousElementSibling;
     input.value = editValue.innerHTML;
     isEditing = true;
     submitBtn.value = 'edit';
   } else if (type === 'delete') {
     handleDelete(targetId);
-  } else {
-    handleClear();
   }
 };
 
@@ -85,10 +73,21 @@ const handleSubmit = (e) => {
   } else if (value === '') {
     showMsg('value has to be included some words.');
   } else if (isEditing) {
-    editValue.innerHTML = value;
-    showMsg('items edited');
+    const newEditList = {...editedId, text: value};
+    arrayList.map((item) => {
+      if (item.id === newEditList.id) {
+        item.text = value;
+      }
+      return item;
+    });
+    editValue.innerHTML = showMsg('items edited');
     isEditing = false;
   }
 };
 
+const clearAll = () => {
+  arrayList = [];
+  addItem(arrayList);
+};
 form.addEventListener('submit', handleSubmit);
+clearBtn.addEventListener('click', clearAll);
