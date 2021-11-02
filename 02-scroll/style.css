@@ -1,0 +1,50 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+section {
+  min-height: 100vh;
+  background: azure;
+  border-bottom: 2px solid black;
+  padding-top: 2rem;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 0 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+footer {
+  padding: 2rem 0;
+  background-color: black;
+  color: white;
+  letter-spacing: 1rem;
+  font-size: 1.2rem;
+}
+
+.navbar h2 {
+  font-size: 2rem;
+  color: cadetblue;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0;
+}
+.navbar-menu a {
+  border-radius: 10px;
+  padding: 0.3rem 1rem;
+  transition: all 0.3s linear;
+}
+.navbar-menu a:hover {
+  background: black;
+  color: white;
+  cursor: pointer;
+}
