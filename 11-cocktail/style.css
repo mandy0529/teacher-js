@@ -1,0 +1,24 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+}
+section {
+  min-height: 100vh;
+  margin-top: 3rem;
+}
+form {
+  margin-top: 2rem;
+}
+a {
+  margin: 1rem;
+}
+.cocktail {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.cocktail-img {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
