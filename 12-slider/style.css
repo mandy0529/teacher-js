@@ -1,0 +1,77 @@
+body {
+  background-color: rgb(228, 228, 228);
+  min-height: 100vh;
+}
+
+.section {
+  width: 80vw;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  transition: 0.3s linear;
+}
+.section .desc {
+  max-width: 60%;
+  margin: auto;
+  font-size: 1.4rem;
+}
+.section .btns {
+  position: absolute;
+  background-color: black;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.btn {
+  position: absolute;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  background-color: transparent;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+.section .btns .left {
+  left: -10px;
+}
+.section .btns .right {
+  right: -10px;
+}
+
+/* more css */
+.container {
+  display: flex;
+  position: relative;
+  height: 550px;
+  overflow: hidden;
+  background-color: teal;
+}
+.person-img {
+  width: 200px;
+  height: 300px;
+}
+.person-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  transition: all 0.3s linear;
+  opacity: 0;
+}
+.person-item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.person-item.next {
+  transform: translateX(100%);
+}
+.person-item.prev {
+  transform: translateX(-100%);
+}
