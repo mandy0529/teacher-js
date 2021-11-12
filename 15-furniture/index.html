@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>minjiture</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="index.js"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <!-- nav -->
+      <div class="nav-center">
+        <div>
+          <button class="toggle-nav">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">home</a></li>
+            <li><a href="products.html" class="nav-link">products</a></li>
+            <li><a href="about.html" class="nav-link">about</a></li>
+          </ul>
+        </div>
+        <!-- logo -->
+        <img src="images/logo-white.svg" alt="logo" />
+        <!-- cart -->
+        <div class="toggle-container">
+          <button class="toggle-cart">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+          <span class="cart-item-count">1</span>
+        </div>
+      </div>
+    </nav>
+
+    <!--hero-->
+    <section class="hero">
+      <div class="hero-container">
+        <h1 class="text-slanted">Rest, Relax, Unwind</h1>
+        <h3>improve your choice</h3>
+        <a href="products.html" class="hero-btn">shop now</a>
+      </div>
+    </section>
+
+    <!-- sidebar -->
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="sidebar-links">
+          <li>
+            <a class="sidebar-link" href="index.html">
+              <i class="fas fa-home fa-fw"></i>
+              home
+            </a>
+          </li>
+          <li>
+            <a class="sidebar-link" href="products.html">
+              <i class="fas fa-couch fa-fw"></i>
+              products
+            </a>
+          </li>
+          <li>
+            <a class="sidebar-link" href="about.html">
+              <i class="fas fa-book fa-fw"></i>
+              about
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- cart -->
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">your bag</h3>
+        </header>
+        <!-- cart items -->
+        <div class="cart-items">
+          <!-- single item -->
+          <article class="cart-item">
+            <img
+              src="./images/main-bcg.jpeg"
+              alt="cart-item"
+              class="cart-item-img"
+            />
+            <!-- item info -->
+            <div>
+              <h4 class="cart-item-name">high-back bench</h4>
+              <p class="cart-item-price">$13.99</p>
+              <button class="cart-item-remove-btn">remove</button>
+            </div>
+            <div>
+              <button class="cart-item-increase-btn">
+                <i class="fas fa-chevron-up"></i>
+              </button>
+              <p class="cart-item-amount">1</p>
+              <button class="cart-item-decrease-btn">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+        <!-- footer -->
+        <footer>
+          <h3 class="cart-total text-slanted">total : $12.99</h3>
+          <button class="cart-checkout btn">checkout</button>
+        </footer>
+      </aside>
+    </div>
+
+    <!-- featured products -->
+    <section class="section featured">
+      <div class="title">
+        <h2><span>/</span> featured</h2>
+      </div>
+      <div class="featured-center section-center">
+        <h2 class="section-loading">loading...</h2>
+      </div>
+      <a href="products.html" class="btn"> all products </a>
+    </section>
+  </body>
+</html>
