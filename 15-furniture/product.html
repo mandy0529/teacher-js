@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Comfy</title>
+    <title>Single Product</title>
     <!-- font-awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <!-- styles css -->
-    <link rel="stylesheet" href="./style.css" />
-  </head>
 
+    <!-- styles css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
   <body>
     <!-- navbar -->
     <nav class="navbar page">
@@ -45,14 +45,12 @@
         </div>
       </div>
     </nav>
-
     <!-- hero -->
     <section class="page-hero">
       <div class="section-center">
-        <h3 class="page-hero-title">Home / About</h3>
+        <h3 class="page-hero-title">Home / Single Product</h3>
       </div>
     </section>
-
     <!-- sidebar -->
     <div class="sidebar-overlay">
       <aside class="sidebar">
@@ -60,7 +58,6 @@
         <button class="sidebar-close">
           <i class="fas fa-times"></i>
         </button>
-
         <!-- links -->
         <ul class="sidebar-links">
           <li>
@@ -84,7 +81,6 @@
         </ul>
       </aside>
     </div>
-
     <!-- cart -->
     <div class="cart-overlay">
       <aside class="cart">
@@ -103,24 +99,33 @@
         </footer>
       </aside>
     </div>
-
-    <!-- about -->
-    <section class="section section-center about-page">
-      <div class="title">
-        <h2><span>/</span> our history</h2>
+    <!-- product info -->
+    <section class="single-product">
+      <div class="section-center single-product-center">
+        <img
+          src="./images/main-bcg.jpeg"
+          class="single-product-img img"
+          alt=""
+        />
+        <article class="single-product-info">
+          <div>
+            <h2 class="single-product-title">couch</h2>
+            <p class="single-product-company text-slanted">by marcos</p>
+            <p class="single-product-price">$30.00</p>
+            <div class="single-product-colors"></div>
+            <p class="single-product-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
+              modi? Minima libero doloremque necessitatibus! Praesentium
+              recusandae quod nesciunt animi voluptatem!
+            </p>
+            <button class="addToCartBtn btn" data-id="id">add to cart</button>
+          </div>
+        </article>
       </div>
-      <p class="about-text">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-        accusantium sapiente tempora sed dolore esse deserunt eaque excepturi,
-        delectus error accusamus vel eligendi, omnis beatae. Quisquam, dicta.
-        Eos quod quisquam esse recusandae vitae neque dolore, obcaecati incidunt
-        sequi blanditiis est exercitationem molestiae delectus saepe odio
-        eligendi modi porro eaque in libero minus unde sapiente consectetur
-        architecto. Ullam rerum, nemo iste ex, eaque perspiciatis nisi, eum
-        totam velit saepe sed quos similique amet. Ex, voluptate accusamus
-        nesciunt totam vitae esse iste.
-      </p>
     </section>
-    <script type="module" src="./src/pages/about.js"></script>
+    <div class="page-loading">
+      <h2>loading...</h2>
+    </div>
+    <script type="module" src="./src/pages/product.js"></script>
   </body>
 </html>

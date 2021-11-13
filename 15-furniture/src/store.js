@@ -9,4 +9,9 @@ const setStore = (data) => {
   setLocalStorage('store', store);
 };
 
-export {setStore, store};
+const findItem = (id) => {
+  const product = store.find((item) => item.id === id);
+  return product;
+};
+
+export {setStore, store, findItem};
